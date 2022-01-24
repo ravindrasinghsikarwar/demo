@@ -21,7 +21,7 @@ get_header(); ?>
 					<hr>
 					<!-- BEGIN SEARCH INPUT -->
 					<div class="input-group">
-					  <input type="text" class="form-control" id="MovieSearch">
+					  <input type="text" class="form-control" placeholder="Search keyword like red, green, blue, yellow" id="MovieSearch">
 					  <span class="input-group-btn">
 						<button class="btn btn-primary" id="search-button" type="button"><i class="fa fa-search"></i></button>
 					  </span>

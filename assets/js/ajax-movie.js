@@ -5,6 +5,16 @@
 // jQuery on DOM is ready. ------------------------------------------------------------------------------------------------
 jQuery(document).ready(function($) {
 	/**
+	* When user clicks on enter key run ajax...
+	*
+	*/
+	$(document).keypress(function(event) {
+		if (event.key === "Enter") {
+			$('#search-button').click();
+			return false;
+		}
+	});
+	/**
 	* When user clicks on search icon...
 	*
 	*/
@@ -38,15 +48,19 @@ jQuery(document).ready(function($) {
 			success: function(data) {
 				var str = "";
 				var count = 1;
-				for(var i= 0; i < data.Search.length; i++){
-					str +='<tr>';
-					str +='<td class="number text-center">'+count+'</td>';
-					str +='<td class="image"><img src="'+data.Search[i].Poster+'" alt="'+data.Search[i].Title+'"></td>';
-					str +='<td class="title"><strong>Title : </strong>'+data.Search[i].Title+'</td>';
-					str +='<td class="rate text-right"><strong>Type : </strong>'+data.Search[i].Type+'</td>';
-					str +='<td class="price text-right"><strong>Year : </strong>'+data.Search[i].Year+'</td>';
-					str +='</tr>';
-					count++;
+				if (typeof data.Search !== 'undefined' && data.Search.length > 0) {
+					for(var i= 0; i < data.Search.length; i++){
+						str +='<tr>';
+						str +='<td class="number text-center">'+count+'</td>';
+						str +='<td class="image"><img src="'+data.Search[i].Poster+'" alt="'+data.Search[i].Title+'"></td>';
+						str +='<td class="title"><strong>Title : </strong>'+data.Search[i].Title+'</td>';
+						str +='<td class="rate text-right"><strong>Type : </strong>'+data.Search[i].Type+'</td>';
+						str +='<td class="price text-right"><strong>Year : </strong>'+data.Search[i].Year+'</td>';
+						str +='</tr>';
+						count++;
+					}
+				} else {
+					str +='No result found for this keyword.';
 				}
 				$("table.table-hover tbody").html(str);
 				//Hide Loader
