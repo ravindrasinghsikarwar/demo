@@ -18,6 +18,8 @@ Bootstrap v.4 basic theme. For build new theme based on Bootstrap
 * Install fresh wordpress setup on your localhost
 * go to wp-content/themes/ , open cmd on this location.
 * Now run command 'git clone https://github.com/ravindrasinghsikarwar/demo.git'.
+* open gulpfile.js in wp-content/themes/demo folder.
+* update 'proxy' url with your localhost / site url.
 * After this run 'cd demo' command.
 * Next run 'npm install' command.
 * Next run 'cp -i file/npm-shrinkwrap.json npm-shrinkwrap.json', confirmation type 'yes' and press enter.
