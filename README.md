@@ -20,8 +20,9 @@ Bootstrap v.4 basic theme. For build new theme based on Bootstrap
 * Now run command 'git clone https://github.com/ravindrasinghsikarwar/demo.git'.
 * After this run 'cd demo' command.
 * Next run 'npm install' command.
-* Next run 'cp file/npm_shrinkwrap.json npm_srinkwrap.json'.
-* Finally run 'npm install' again.
+* Next run 'cp -i file/npm-shrinkwrap.json npm-shrinkwrap.json', confirmation type 'yes' and press enter.
+* run 'npm install' again.
+* Finally run 'gulp build'.
 * Login into wp-admin and activate demo theme.
 * Create a new page with any name (for eg. Movie)
 * Choose template 'Movie Search' and save
