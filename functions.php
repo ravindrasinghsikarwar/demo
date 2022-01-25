@@ -85,7 +85,7 @@ function ajax_movie_load_scripts(){
 		
 		if($template_name == 'search-template.php'){
 		   //If page is using search template then load our movie script
-		   wp_enqueue_script('movie_ajax', get_template_directory_uri() .'/assets/js/ajax-movie.js');		
+		   wp_enqueue_script('movie_ajax', get_template_directory_uri() .'/assets/js/scripts.js');		
 		}
 	}
 }
